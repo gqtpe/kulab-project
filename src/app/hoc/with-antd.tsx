@@ -18,6 +18,14 @@ export const withAntd = (component: ReactNode) => {
                     fontSizeHeading4: 22,
                     colorText: "#000000",
                 },
+                components: {
+                    Typography: {
+
+                    },
+                    Input: {
+                      padding: 12,
+                    },
+                },
                 }
             }
         >
