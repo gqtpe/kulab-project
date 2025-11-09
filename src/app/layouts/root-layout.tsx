@@ -1,15 +1,19 @@
 import {Layout} from "antd";
 import {Outlet} from "react-router";
-import {useState} from "react";
-// import {SplashScreenPage} from "@pages/splash-screen-page";
+import {useLayoutEffect, useState} from "react";
+import {SplashScreenPage} from "@pages/splash-screen-page";
 const {Content, Footer} = Layout;
 type Loading = 'fulfilled' | 'pending' | 'rejected' | 'idle';
 
 export const RootLayout = () => {
-
-    const [loading] = useState<Loading>('idle')
+    const [loading, setLoading] = useState<Loading>('pending')
+    useLayoutEffect(() => {
+        setTimeout(() => {
+            setLoading('fulfilled')
+        }, 2000)
+    }, [])
     if (loading === "pending") {
-        return <div>...loading</div>
+        return <SplashScreenPage/>
     }
     //todo: move to separate file and replace with SplashScreenPage
     return (
@@ -17,7 +21,7 @@ export const RootLayout = () => {
             {/*<HeaderC renderAccountBar={<Button type="primary"><b>Login</b></Button>}/>*/}
             <Content className="h-[100vh]">
                 {/*<div className="content-wrapper w-full h-full">*/}
-                    <Outlet/>
+                <Outlet/>
                 {/*</div>*/}
             </Content>
             <Footer className="flex justify-center items-center">
