@@ -1,21 +1,29 @@
 @import "./reset.css";
 @import "tailwindcss";
 
-#root{
+#root {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow-y: auto;
     font-family: 'Open Sans', sans-serif;
 }
+
 @theme {
     --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.10);
     --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.10);
     --shadow-lg: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-sp: 0px 9.33px 32px 0px #42766266;
+
     --color-gray: #85858F;
     --color-primary: #52B69A;
     --color-light-gray: #E4E7E6;
+    --ln1: linear-gradient(180deg, rgba(246, 250, 249, 0) 0%, #FFFFFF 100%);
 }
-.content-wrapper{
+.content-wrapper {
     @apply max-w-[1200px] !w-full mx-8;
+}
+
+.shadow-logo {
+    box-shadow: 0 9.33px 32px 0 #42766266;
 }
