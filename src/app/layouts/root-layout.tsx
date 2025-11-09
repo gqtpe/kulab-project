@@ -10,7 +10,7 @@ export const RootLayout = () => {
     useLayoutEffect(() => {
         setTimeout(() => {
             setLoading('fulfilled')
-        }, 2000)
+        }, 500)
     }, [])
     if (loading === "pending") {
         return <SplashScreenPage/>
@@ -19,10 +19,10 @@ export const RootLayout = () => {
     return (
         <Layout className="">
             {/*<HeaderC renderAccountBar={<Button type="primary"><b>Login</b></Button>}/>*/}
-            <Content className="h-[100vh]">
-                {/*<div className="content-wrapper w-full h-full">*/}
+            <Content className="w-full h-[100vh] flex justify-center items-center">
+                <div className="content-wrapper w-full h-full">
                 <Outlet/>
-                {/*</div>*/}
+                </div>
             </Content>
             <Footer className="flex justify-center items-center">
                 <div className="content-wrapper w-full text-center">
