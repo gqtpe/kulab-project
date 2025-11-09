@@ -15,10 +15,10 @@ export const RootLayout = () => {
     return (
         <Layout className="">
             {/*<HeaderC renderAccountBar={<Button type="primary"><b>Login</b></Button>}/>*/}
-            <Content className="flex justify-center items-center min-h-[calc(100vh-64px)]">
-                <div className="content-wrapper w-full h-full">
+            <Content className="h-[100vh]">
+                {/*<div className="content-wrapper w-full h-full">*/}
                     <Outlet/>
-                </div>
+                {/*</div>*/}
             </Content>
             <Footer className="flex justify-center items-center">
                 <div className="content-wrapper w-full text-center">

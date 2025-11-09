@@ -13,6 +13,7 @@
     --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.10);
     --shadow-lg: 0px 4px 8px rgba(0, 0, 0, 0.15);
     --color-gray: #85858F;
+    --color-primary: #52B69A;
     --color-light-gray: #E4E7E6;
 }
 .content-wrapper{
